@@ -39,7 +39,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
   .container {
     padding: 0;
     max-width: 100%;

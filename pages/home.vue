@@ -86,6 +86,7 @@
 
 <script>
 export default {
+  name: 'PageHome',
   data: () => ({
     cards: [
       { title: 'house', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 4, text: '안녕하세요.' },
