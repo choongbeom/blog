@@ -6,11 +6,14 @@ export default {
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  router: {
+    base: '/blog/'
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - blog',
-    title: 'blog',
+    titleTemplate: '%s blog',
+    title: 'Choong-beom Kim`s',
     htmlAttrs: {
       lang: 'ko'
     },
