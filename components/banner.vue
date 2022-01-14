@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'Signin',
+  name: 'ComBanner',
   layout: 'empty',
   data () {
     return {
@@ -42,6 +42,7 @@ export default {
 <style scoped>
   .container {
     padding: 0;
+    max-width: 100%;
   }
 
   #banner {
