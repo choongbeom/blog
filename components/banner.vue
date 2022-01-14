@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'ComBanner',
+  name: 'Banner',
   layout: 'empty',
   data () {
     return {

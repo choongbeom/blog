@@ -22,5 +22,6 @@ module.exports = {
     'no-var': 0,
     'camelcase': 0,
     'no-console' : 0,
+    'vue/multi-word-component-names': 'off',
   }
 }
