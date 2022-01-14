@@ -42,7 +42,6 @@ export default {
 <style>
   .container {
     padding: 0;
-    max-width: 100%;
   }
 
   #banner {
