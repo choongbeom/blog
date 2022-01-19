@@ -4,7 +4,7 @@
       <p style="font-size:20pt;font-weight:bold;">13년 차, 다양한 경험과 유연한 사고를 가진 개발자 김충범입니다.</p>
       <div class="parent">
          <div class="child">           
-           <img class="child" src="https://github.com/choongbeom/blog/blob/master/static/me.jpg" alt="">
+           <img class="child" src="https://github.com/choongbeom/blog/blob/master/static/me.jpg?raw=true" alt="">
          </div>
          <div class="child">
       <pre>
