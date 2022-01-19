@@ -26,11 +26,11 @@ export default {
     return {
       items: [
         {
-          scr: '/banner.jpg',
+          scr: 'https://github.com/choongbeom/blog/blob/master/static/banner.jpg',
           href: 'https://github.com/choongbeom/'
         },
         {
-          scr: '/banner.jpg',
+          scr: 'https://github.com/choongbeom/blog/blob/master/static/banner.jpg',
           href: 'https://github.com/choongbeom/'
         }       
       ]
