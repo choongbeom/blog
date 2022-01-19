@@ -4,11 +4,15 @@
       show-arrows-on-hover
       hide-delimiters
       height="400px"
+      :cycle="true" 
+      :interval="5000"
     >
       <v-carousel-item
         v-for="(item, i) in items"
         :key="i"
-        :src="item"
+        :src="item.scr"
+        :href="item.href"
+        target='_blank'
       />
     </v-carousel>
   </v-container>
@@ -21,8 +25,14 @@ export default {
   data () {
     return {
       items: [
-        'https://cdn.vuetifyjs.com/images/parallax/material.jpg',
-        'https://cdn.vuetifyjs.com/images/parallax/material2.jpg'
+        {
+          scr: '/banner.jpg',
+          href: 'https://github.com/choongbeom/'
+        },
+        {
+          scr: '/banner.jpg',
+          href: 'https://github.com/choongbeom/'
+        }       
       ]
     }
   },

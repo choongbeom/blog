@@ -5,3 +5,11 @@
 .main{
   margin: 1%;
 }
+
+.utterances {
+  max-width: 100% !important;
+}
+
+pre{
+  white-space: pre-wrap; /* pre tag내에 word wrap */
+} 

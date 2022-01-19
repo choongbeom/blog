@@ -28,7 +28,6 @@
         </v-list>
       </v-navigation-drawer>
 
-      <!-- 앱바 -->
       <v-app-bar
         :clipped-left="clipped"
         fixed
@@ -36,43 +35,6 @@
       >
         <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
         <v-toolbar-title style="cursor: pointer" @click="$router.push('/')" @click.stop="drawer = false" v-text="title" />
-
-        <!-- 분활처리 오른쪽 끝으로 정렬 -->
-        <v-spacer />
-
-        <v-menu
-          left
-          bottom
-        >
-          <template slot="activator" slot-scope="{ on, attrs }">
-            <v-btn
-              icon
-              v-bind="attrs"
-              v-on="on"
-            >
-              <v-icon>mdi-dots-vertical</v-icon>
-            </v-btn>
-          </template>
-
-          <v-list>
-            <v-list-item
-              v-for="(item, i) in menuItems"
-              :key="i"
-              :to="item.to"
-              router
-              exact
-            >
-              <v-list-item-action>
-                <v-icon>{{ item.icon }}</v-icon>
-              </v-list-item-action>
-
-              <v-list-item-content>
-                <v-list-item-title v-text="item.title" />
-              </v-list-item-content>
-            </v-list-item>
-          </v-list>
-        </v-menu>
-
       </v-app-bar>
 
       <v-main>
@@ -86,13 +48,19 @@
         :absolute="!fixed"
         app
       >
-        <span style="display: inline-block; width: 100%; text-align: center;">cbkim &copy; {{ new Date().getFullYear() }}</span>
+        <span style="display: inline-block; width: 100%; text-align: center;">Choong-beom Kim &copy; {{ new Date().getFullYear() }}</span>
       </v-footer>
 
   </v-app>
 </template>
 
 <script>
+// https://materialdesignicons.com/
+import {  mdiHome,mdiInformation,mdiDatabase,
+          mdiLanguageCpp,mdiLanguageCsharp,mdiLanguageJava,
+          mdiLanguageJavascript,mdiDatabaseSync,mdiDatabaseSearch,
+          mdiAlphaECircle,mdiVuejs,mdiGithub } from "@mdi/js";
+
 export default {
   name: 'DefaultLayout',
   data () {
@@ -102,16 +70,68 @@ export default {
       fixed: false,
       naviItems: [
         {
-          icon: 'mdi-home',
+          icon: mdiHome,
           title: 'HOME',
           to: '/'
         },
         {
-          icon: 'mdi-information',
+          icon: mdiInformation,
           title: 'About',
           to: '/about'
-        }
+        },
+        {
+          icon: mdiLanguageCpp,
+          title: 'C/C++',
+          to: '/cpp/list'
+        },
+        {
+          icon: mdiLanguageCsharp,
+          title: 'C#',
+          to: '/cshap/list'
+        },
+        {
+          icon: mdiDatabase,
+          title: 'DB',
+          to: '/db/list'
+        },
+        {
+          icon: mdiGithub,
+          title: 'GitHub',
+          to: '/github/list'
+        },
+        {
+          icon: mdiLanguageJava,
+          title: 'JAVA',
+          to: '/java/list'
+        },
+        {
+          icon: mdiDatabaseSync,
+          title: 'JPA',
+          to: '/jpa/list'
+        },
+        {
+          icon: mdiLanguageJavascript,
+          title: 'JavaScript',
+          to: '/js/list'
+        },
+        {
+          icon: mdiDatabaseSearch,
+          title: 'QueryDSL',
+          to: '/qdsl/list'
+        },
+        {
+          icon: mdiVuejs,
+          title: 'Vue',
+          to: '/vue/list'
+        },
+        {
+          icon: mdiAlphaECircle,
+          title: 'ETC',
+          to: '/etc/list'
+        },
+
       ],
+      /*
       menuItems: [
         {
           icon: 'mdi-login-variant',
@@ -124,8 +144,9 @@ export default {
           to: '/signup'
         }
       ],
+      */
       miniVariant: false,
-      title: 'Choong-beom Kim`s blog'
+      title: 'Choong-beom Kim`s blog',
     }
   }
 }
