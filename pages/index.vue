@@ -73,7 +73,7 @@ export default {
         },
         { 
           title: '사진4', 
-          src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', 
+          src: 'https://cdn.vuetifyjs.com/images/cards/cooking.png', 
           text: '사진4 입니다.',
           to: '/photogallery'
         }
