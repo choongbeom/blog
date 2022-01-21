@@ -17,7 +17,7 @@ export default {
       {
         title: 'Vue Life Cycle, Vuex의 구조',
         date: '2021-12-20',
-        to: '/vue/vueliftcycle'
+        to: '/vue/notuesed/vueliftcycle'
       }     
     ]
   })

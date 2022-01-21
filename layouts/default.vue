@@ -82,57 +82,57 @@ export default {
         {
           icon: mdiLanguageCpp,
           title: 'C/C++',
-          to: '/cpp'
+          to: '/cpp/notuesed/list'
         },
         {
           icon: mdiLanguageCsharp,
           title: 'C#',
-          to: '/cshap'
+          to: '/cshap/notuesed/list'
         },
         {
           icon: mdiDatabase,
           title: 'DB',
-          to: '/db'
+          to: '/db/notuesed/list'
         },
         {
           icon: mdiGithub,
           title: 'GitHub',
-          to: '/github'
+          to: '/github/notuesed/list'
         },
         {
           icon: mdiLanguageJava,
           title: 'JAVA',
-          to: '/java'
+          to: '/java/notuesed/list'
         },
         {
           icon: mdiDatabaseSync,
           title: 'JPA',
-          to: '/jpa'
+          to: '/jpa/notuesed/list'
         },
         {
           icon: mdiLanguageJavascript,
           title: 'JavaScript',
-          to: '/js'
+          to: '/js/notuesed/list'
         },
         {
           icon: mdiDatabaseSearch,
           title: 'QueryDSL',
-          to: '/qdsl'
+          to: '/qdsl/notuesed/list'
         },
         {
           icon: mdiVuejs,
           title: 'Vue',
-          to: '/vue'
+          to: '/vue/notuesed/list'
         },
         {
           icon: mdiAlphaECircle,
           title: 'ETC',
-          to: '/etc'
+          to: '/etc/notuesed/list'
         },
         {
           icon: mdiImageMultiple,
           title: 'Photo Gallery',
-          to: '/etc'
+          to: '/etc/notuesed/list'
         }
       ],
       miniVariant: false,

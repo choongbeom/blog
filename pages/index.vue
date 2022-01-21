@@ -10,7 +10,7 @@
         <v-data-table 
           style="min-height:300px;"
           :headers="headers"
-          :items="posts"
+          :items="datas"
           :items-per-page="5"
           :sort-by.sync="sortBy"
           :sort-desc.sync="sortDesc"
@@ -19,7 +19,8 @@
             <tr>             
               <td> {{ formatDate(item.date) }} </td>
               <td>
-                <v-btn plain :to="{path: '_slug', query:{to:item.to}}" style="width: 100%;"> {{ item.title }} </v-btn>
+                <!--<v-btn plain :to="{path: '_slug', query:{to:item.to}}" style="width: 100%;"> {{ item.title }} </v-btn>-->
+                <v-btn plain :to="item.to" style="width: 100%;"> {{ item.title }} </v-btn>
               </td>              
             </tr>
           </template>
@@ -112,6 +113,28 @@ export default {
           text: '사진4 입니다.',
           to: '/photogallery'
         }
+      ],
+      datas: [
+        {
+          title: 'Github Merge',
+          date: '2021-12-27',
+          to: '/github/notuesed/merge'
+        },
+        {
+          title: '프록시 and 즉시로딩 and 지연로딩',
+          date: '2021-12-22',
+          to: '/jpa/notuesed/loading'
+        },
+        {
+          title: 'Vue Life Cycle, Vuex의 구조',
+          date: '2021-12-20',
+          to: '/vue/notuesed/vueliftcycle'
+        },
+        {
+          title: 'pageshow/pagehide event',
+          date: '2021-12-20',
+          to: '/js/notuesed/pageevent'
+        },        
       ],
       headers: [
         {

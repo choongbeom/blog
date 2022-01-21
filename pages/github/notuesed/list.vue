@@ -17,22 +17,22 @@ export default {
       {
         title: 'GitHub Merge',
         date: '2021-12-27',
-        to: '/github/merge'
+        to: '/github/notuesed/merge'
       },
       {
         title: 'GitHub 업로드',
         date: '2021-10-26',
-        to: '/github/upload'
+        to: '/github/notuesed/upload'
       },
       {
         title: 'GitHub Branch',
         date: '2021-10-26',
-        to: '/github/branch'
+        to: '/github/notuesed/branch'
       },   
       {
         title: 'GitHub 자료',
         date: '2021-10-25',
-        to: '/github/github'
+        to: '/github/notuesed/github'
       }
     ]
   })

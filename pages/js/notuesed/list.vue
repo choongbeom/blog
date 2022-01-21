@@ -17,7 +17,7 @@ export default {
       {
         title: 'pageshow/pagehide event',
         date: '2021-12-20',
-        to: '/js/pageevent'
+        to: '/js/notuesed/pageevent'
       }     
     ]
   })

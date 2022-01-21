@@ -17,7 +17,7 @@ export default {
       {
         title: 'SQL-DDL',
         date: '2021-10-28',
-        to: '/db/sqlddl'
+        to: '/db/notuesed/sqlddl'
       }     
     ]
   })

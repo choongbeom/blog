@@ -17,7 +17,7 @@ export default {
       {
         title: '회고록',
         date: '2021-10-26',
-        to: '/cpp/history'
+        to: '/cpp/notuesed/history'
       }     
     ]
   })

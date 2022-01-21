@@ -17,12 +17,12 @@ export default {
       {
         title: 'CaseBuilder',
         date: '2021-11-09',
-        to: '/qdsl/casebuilder'
+        to: '/qdsl/notuesed/casebuilder'
       },
       {
         title: 'ExpressionUtils',
         date: '2021-11-09',
-        to: '/qdsl/expressionutils'
+        to: '/qdsl/notuesed/expressionutils'
       }     
     ]
   })

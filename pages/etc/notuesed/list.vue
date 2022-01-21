@@ -17,7 +17,7 @@ export default {
       {
         title: 'Swagger와 Spring REST Docs 통합',
         date: '2021-12-20',
-        to: '/etc/swagger'
+        to: '/etc/notuesed/swagger'
       }     
     ]
   })

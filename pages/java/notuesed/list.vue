@@ -17,7 +17,7 @@ export default {
       {
         title: 'JCF',
         date: '2021-10-29',
-        to: '/java/jcf'
+        to: '/java/notuesed/jcf'
       }     
     ]
   })
