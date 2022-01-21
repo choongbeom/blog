@@ -39,7 +39,9 @@
 
       <v-main>
         <banner />
-        <Nuxt />
+        <v-container>
+          <Nuxt />
+        </v-container>
       </v-main>
 
       <v-footer
