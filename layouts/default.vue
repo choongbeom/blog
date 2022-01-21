@@ -39,9 +39,7 @@
 
       <v-main>
         <banner />
-        <v-container>
-          <Nuxt />
-        </v-container>
+        <Nuxt />
       </v-main>
 
       <v-footer
@@ -59,7 +57,7 @@
 import {  mdiHome,mdiInformation,mdiDatabase,
           mdiLanguageCpp,mdiLanguageCsharp,mdiLanguageJava,
           mdiLanguageJavascript,mdiDatabaseSync,mdiDatabaseSearch,
-          mdiAlphaECircle,mdiVuejs,mdiGithub } from "@mdi/js";
+          mdiAlphaECircle,mdiVuejs,mdiGithub, mdiImageMultiple } from "@mdi/js";
 
 export default {
   name: 'DefaultLayout',
@@ -82,69 +80,59 @@ export default {
         {
           icon: mdiLanguageCpp,
           title: 'C/C++',
-          to: '/cpp/list'
+          to: '/cpp'
         },
         {
           icon: mdiLanguageCsharp,
           title: 'C#',
-          to: '/cshap/list'
+          to: '/cshap'
         },
         {
           icon: mdiDatabase,
           title: 'DB',
-          to: '/db/list'
+          to: '/db'
         },
         {
           icon: mdiGithub,
           title: 'GitHub',
-          to: '/github/list'
+          to: '/github'
         },
         {
           icon: mdiLanguageJava,
           title: 'JAVA',
-          to: '/java/list'
+          to: '/java'
         },
         {
           icon: mdiDatabaseSync,
           title: 'JPA',
-          to: '/jpa/list'
+          to: '/jpa'
         },
         {
           icon: mdiLanguageJavascript,
           title: 'JavaScript',
-          to: '/js/list'
+          to: '/js'
         },
         {
           icon: mdiDatabaseSearch,
           title: 'QueryDSL',
-          to: '/qdsl/list'
+          to: '/qdsl'
         },
         {
           icon: mdiVuejs,
           title: 'Vue',
-          to: '/vue/list'
+          to: '/vue'
         },
         {
           icon: mdiAlphaECircle,
           title: 'ETC',
-          to: '/etc/list'
-        },
-
-      ],
-      /*
-      menuItems: [
-        {
-          icon: 'mdi-login-variant',
-          title: 'Signin',
-          to: '/signin'
+          to: '/etc'
         },
         {
-          icon: 'mdi-account-plus-outline',
-          title: 'Signup',
-          to: '/signup'
+          icon: mdiImageMultiple,
+          title: 'Photo Gallery',
+          to: '/etc'
         }
       ],
-      */
       miniVariant: false,
       title: 'Choong-beom Kim`s blog',
     }

@@ -1,30 +1,32 @@
 <template>
   <v-container>
-    <div class="main">
+    <div>
 
-      <v-card>
+      <v-card style="margin:30px">
         <v-toolbar color="#111">
           <v-toolbar-title>최신 게시글</v-toolbar-title>
         </v-toolbar>
 
-        <v-list style="min-height:200px">
-          <v-list-item
-            v-for="(item, i) in datas"
-            :key="i"
-            :to="item.to"
-          >
-            <v-list-item-content>
-              <v-list-item-title>
-                {{item.date}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.title}}
-              </v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
+        <v-data-table 
+          style="min-height:300px;"
+          :headers="headers"
+          :items="posts"
+          :items-per-page="5"
+          :sort-by.sync="sortBy"
+          :sort-desc.sync="sortDesc"
+        >
+          <template #item="{ item }">            
+            <tr>             
+              <td> {{ formatDate(item.date) }} </td>
+              <td>
+                <v-btn plain :to="{path: '_slug', query:{to:item.to}}" style="width: 100%;"> {{ item.title }} </v-btn>
+              </td>              
+            </tr>
+          </template>
+        </v-data-table>
       </v-card>
 
-      <br><br>
-
-      <v-card color="#111">
+      <v-card color="#111" style="margin:30px">
         <v-toolbar color="#111">
           <v-toolbar-title>포토 갤러리</v-toolbar-title>
         </v-toolbar>
@@ -51,6 +53,39 @@
 <script>
 export default {
   name: 'Home',
+  asyncData( {$content}) {
+    
+    // 특정 폴더의 파일들을 가져오는 방법
+    const context = require.context("/content", true, /\.md$/)
+    const posts = []    
+    context.keys().forEach(async (fileName) => {      
+      const name = fileName.replace('.md','')
+      const content = await $content(name).sortBy('createdAt', 'desc').fetch();
+      posts.push(
+        {
+          title: content.title,
+          date: content.createdAt,
+          to: content.to
+        });      
+    })
+
+    // 포토 갤러리 부분 - 미구현
+    const contextpoto = require.context("/content/photogallery", false, /\.md$/)
+    const potos = []
+    contextpoto.keys().forEach(async (fileName) => {      
+      const name = fileName.replace('.md','')
+      const content = await $content(name).sortBy('createdAt', 'desc').fetch();
+      potos.push(
+        {
+          title: content.title,
+          src: content.createdAt,
+          text: content.text,
+          to: content.to
+        });      
+    })
+
+    return { posts, potos };
+  },  
   data() {
     return {
       cards: [
@@ -78,28 +113,28 @@ export default {
           to: '/photogallery'
         }
       ],
-      datas: [
+      headers: [
         {
-          title: 'Github Merge',
-          date: '2021-12-27',
-          to: '/github/merge'
+          text: '날 짜',
+          align: 'start',
+          sortable: true,
+          value: 'date', 
         },
         {
-          title: '프록시 and 즉시로딩 and 지연로딩',
-          date: '2021-12-22',
-          to: '/jpa/loading'
-        },
-        {
-          title: 'Vue Life Cycle, Vuex의 구조',
-          date: '2021-12-20',
-          to: '/vue/vueliftcycle'
-        },
-        {
-          title: 'pageshow/pagehide event',
-          date: '2021-12-20',
-          to: '/js/pageevent'
+          text: '제 목',
+          align: 'center',
+          sortable: true,
+          value: 'title', 
         }
-      ]
+      ],
+      sortBy: 'date',
+      sortDesc: true,
+    }
+  },
+  methods: {
+    formatDate(datetime){
+      var day = new Date(datetime);
+      return day.toISOString().substring(0, 10);
     }
   }
 }
