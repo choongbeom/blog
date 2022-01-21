@@ -4,7 +4,7 @@
 
       <v-card style="margin:30px">
         <v-toolbar color="#111">
-          <v-toolbar-title>최신 게시글</v-toolbar-title>
+          <v-toolbar-title>최근 포스트</v-toolbar-title>
         </v-toolbar>
 
         <v-data-table 
