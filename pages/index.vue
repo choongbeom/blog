@@ -10,7 +10,7 @@
         <v-data-table 
           style="min-height:300px;"
           :headers="headers"
-          :items="datas"
+          :items="posts"
           :items-per-page="5"
           :sort-by.sync="sortBy"
           :sort-desc.sync="sortDesc"
@@ -19,8 +19,8 @@
             <tr>             
               <td> {{ formatDate(item.date) }} </td>
               <td>
-                <!--<v-btn plain :to="{path: '_slug', query:{to:item.to}}" style="width: 100%;"> {{ item.title }} </v-btn>-->
-                <v-btn plain :to="item.to" style="width: 100%;"> {{ item.title }} </v-btn>
+                <v-btn plain :to="{path: '_slug', query:{to:item.to}}" style="width: 100%;"> {{ item.title }} </v-btn>
+                <!--<v-btn plain :to="item.to" style="width: 100%;"> {{ item.title }} </v-btn>-->
               </td>              
             </tr>
           </template>
